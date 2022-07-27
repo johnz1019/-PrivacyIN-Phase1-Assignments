@@ -1,7 +1,13 @@
 ## Week2 Assignments: Classical Protocol Engineering Practice
 
+作业代码链接：https://github.com/johnz1019/PrivacyIN-Phase1-Assignments/tree/master/week2
 
-当前目录使用了[circom](https://docs.circom.io/)来将下方的函数`f(x, y, z)`转换为零知识证明zk-SNARKs的circuit，并完成可验证计算。
+commit hash: 71e17e0fa697b5e25228307c50a95a0193dfa804
+
+
+
+使用[circom](https://docs.circom.io/)来将下方的函数`f(x, y, z)`转换为零知识证明zk-SNARKs的circuit，并完成可验证计算。
+
 ```javascript
 def f(x, y, z):
   if x == 1:
@@ -107,7 +113,10 @@ npm install -g snarkjs
 ```
 
 #### 2. 执行可验证计算
+
 ```
+git clone https://github.com/johnz1019/PrivacyIN-Phase1-Assignments.git
+cd PrivacyIN-Phase1-Assignments/week2/
 sh build.sh
 ```
 代码的运行具体分为以下5个步骤
@@ -115,7 +124,7 @@ sh build.sh
 - 基于 input 生成 witness;
 - Trust setup;
 - Generate proof: 由prover根据witness和prove key生成proof;
-- Verify proof: 由verifier根据public input和verification key对proof进行验证.
+- Verify proof: 由verifier根据public input和verification key对proof进行验证。
 
 代码运行截图:
 ![Execution](./execution_snapshot.png "Execution Snapshot")
